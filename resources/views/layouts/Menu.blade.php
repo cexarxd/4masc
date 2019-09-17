@@ -16,10 +16,6 @@
                     <div class="card">
                         <div class="card-body">  
                             <h4>Zona de Calculo</h4>
-                             
-
-                           
-                         
                         </div>
                     </div>
                 </div>

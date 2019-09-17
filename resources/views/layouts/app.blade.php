@@ -11,13 +11,17 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset("assets/theme/bower_components/font-awesome/css/font-awesome.min.css")}}">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">  <!-- de laravel -->
+    <link rel="stylesheet" href="{{asset("assets/css/custom.css")}}">  <!-- personalizado -->
+    <link href="{{asset("assets/js/jquery-nestable/jquery.nestable.css")}}" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="app">
@@ -71,10 +75,20 @@
                 </div>
             </div>
         </nav>
-
+       
         <main class="py-4">
+                <div class="container">
+                      
+                     </div>
             @yield('content')
+            
         </main>
     </div>
+    @yield("scriptsPlugins")
+    <script src="{{asset("assets/js/jquery-validation/jquery.validate.min.js")}}"></script>
+    <script src="{{asset("assets/js/jquery-validation/localization/messages_es.min.js")}}"></script>
+    <script src="{{asset("assets/js/funciones.js")}}"></script>
+    @yield("scripts")
+    
 </body>
 </html>

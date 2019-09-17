@@ -1,0 +1,2 @@
+git remote add origin https://github.com/cexarxd/4masc.git
+user 4masc

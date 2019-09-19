@@ -16,7 +16,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset("assets/theme/bower_components/font-awesome/css/font-awesome.min.css")}}">
-
+    <!-- cdn de alerta  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="{{asset("assets/theme/bower_components/Ionicons/css/ionicons.min.css")}}">
     <!-- Styles -->
     
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">  <!-- de laravel -->
@@ -84,9 +87,21 @@
             
         </main>
     </div>
+    <script src="{{asset("assets/theme/bower_components/jquery/dist/jquery.min.js")}}"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="{{asset("assets/theme/bower_components/bootstrap/dist/js/bootstrap.min.js")}}"></script>
+    <!-- SlimScroll -->
+    <script src="{{asset("assets/theme/bower_components/jquery-slimscroll/jquery.slimscroll.min.js")}}"></script>
+    <!-- FastClick -->
+    <script src="{{asset("assets/theme/bower_components/fastclick/lib/fastclick.js")}}"></script>
+    
+    <!-- AdminLTE for demo purposes -->
     @yield("scriptsPlugins")
     <script src="{{asset("assets/js/jquery-validation/jquery.validate.min.js")}}"></script>
     <script src="{{asset("assets/js/jquery-validation/localization/messages_es.min.js")}}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="{{asset("assets/js/scripts.js")}}"></script>
     <script src="{{asset("assets/js/funciones.js")}}"></script>
     @yield("scripts")
     

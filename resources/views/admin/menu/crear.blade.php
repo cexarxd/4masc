@@ -1,8 +1,13 @@
 @extends("layouts.app")
-@section('content')
+@section('titulo')
+    Sistema Menús
+@endsection
+
 @section("scripts")
 <script src="{{asset("assets/pages/scripts/admin/menu/crear.js")}}" type="text/javascript"></script>
 @endsection
+
+@section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

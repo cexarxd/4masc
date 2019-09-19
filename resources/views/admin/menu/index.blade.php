@@ -1,4 +1,7 @@
 @extends("layouts.app")
+@section("titulo")
+Menú
+@endsection
 
 @section("styles")
 <link href="{{asset("assets/js/jquery-nestable/jquery.nestable.css")}}" rel="stylesheet" type="text/css" />
@@ -6,13 +9,12 @@
 
 
 @section("scriptsPlugins")
-
-<script src="../../../../assets/js/jquery-nestable/jquery.nestable.js" type="text/javascript"></script>
-
+<script src="{{asset("assets/js/jquery-nestable/jquery.nestable.js")}}" type="text/javascript"></script>
 @endsection
 
 @section("scripts")
 <script src="{{asset("assets/pages/scripts/admin/menu/index.js")}}" type="text/javascript"></script>
+ 
 @endsection
 
 
@@ -23,10 +25,11 @@
         <div class="box box-success">
             <div class="box-header with-border">
                 <h3 class="box-title">Menús</h3>
+                <a href="{{route('crear_menu')}}" class="btn btn-success btn-sm pull-right">Crear menú</a>
             </div>
             <div class="box-body">
                 @csrf
-                <div class="dd" id="nestable">
+                <div class="dd" id="nestable3">
                     <ol class="dd-list">
                         @foreach ($menus as $key => $item)
                             @if ($item["menu_id"] != 0)

@@ -1,13 +1,14 @@
-@extends("theme.$theme.layout")
+@extends("layouts.app")
 @section('titulo')
     Sistema Menús
 @endsection
+
 
 @section("scripts")
 <script src="{{asset("assets/pages/scripts/admin/menu/crear.js")}}" type="text/javascript"></script>
 @endsection
 
-@section('contenido')
+@section('content')
 <div class="row">
     <div class="col-lg-12">
         @include('includes.form-error')

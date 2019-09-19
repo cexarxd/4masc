@@ -53,6 +53,9 @@ Route::post('rol', 'Admin\RolController@guardar')->name('guardar_rol');
 Route::get('rol/{id}/editar', 'Admin\RolController@editar')->name('editar_rol');
 Route::put('rol/{id}', 'Admin\RolController@actualizar')->name('actualizar_rol');
 Route::delete('rol/{id}', 'Admin\RolController@eliminar')->name('eliminar_rol');
+ /*RUTAS MENU_ROL*/
+ Route::get('menu-rol', 'Admin\MenuRolController@index')->name('menu_rol');
+ Route::post('menu-rol', 'Admin\MenuRolController@guardar')->name('guardar_menu_rol');
 /*RUTAS DE PERMISO*/
 //Route::get('permiso', 'PermisoController@index')->name('permiso');
 //Route::get('permiso/crear', 'PermisoController@crear')->name('crear_permiso');

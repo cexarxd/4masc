@@ -2,29 +2,39 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@yield('titulo', '4masc') | 4masc</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    
+    
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!--<title>{{ config('app.name', 'Laravel') }}</title>-->
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset("assets/theme/bower_components/font-awesome/css/font-awesome.min.css")}}">
+    
+     
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="{{asset("assets/theme/bower_components/font-awesome/css/font-awesome.min.css")}}">
+     <!-- Ionicons -->
+     <link rel="stylesheet" href="{{asset("assets/theme/bower_components/Ionicons/css/ionicons.min.css")}}">
+     <!-- Theme style -->
     <!-- cdn de alerta  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-<!-- Ionicons -->
-<link rel="stylesheet" href="{{asset("assets/theme/bower_components/Ionicons/css/ionicons.min.css")}}">
-    <!-- Styles -->
-    
+
+
+    @yield("styles")
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">  <!-- de laravel -->
     <link rel="stylesheet" href="{{asset("assets/css/custom.css")}}">  <!-- personalizado -->
-    <link href="{{asset("assets/js/jquery-nestable/jquery.nestable.css")}}" rel="stylesheet" type="text/css" />
+    <!-- Styles -->
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body>
     <div id="app">
@@ -78,24 +88,19 @@
                 </div>
             </div>
         </nav>
-       
-        <main class="py-4">
-                <div class="container">
-                      
-                     </div>
-            @yield('content')
-            
-        </main>
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="container">
+                @yield('content')
+            </section>
+        </div>
     </div>
- 
-    <!-- Bootstrap 3.3.7 -->
-    <script src="{{asset("assets/theme/bower_components/bootstrap/dist/js/bootstrap.min.js")}}"></script>
+    <script src="{{asset("assets/theme/bower_components/jquery/dist/jquery.min.js")}}"></script>
     <!-- SlimScroll -->
     <script src="{{asset("assets/theme/bower_components/jquery-slimscroll/jquery.slimscroll.min.js")}}"></script>
     <!-- FastClick -->
     <script src="{{asset("assets/theme/bower_components/fastclick/lib/fastclick.js")}}"></script>
     
-    <!-- AdminLTE for demo purposes -->
     @yield("scriptsPlugins")
     <script src="{{asset("assets/js/jquery-validation/jquery.validate.min.js")}}"></script>
     <script src="{{asset("assets/js/jquery-validation/localization/messages_es.min.js")}}"></script>
@@ -103,6 +108,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="{{asset("assets/js/scripts.js")}}"></script>
     <script src="{{asset("assets/js/funciones.js")}}"></script>
+    
     @yield("scripts")
     
 </body>

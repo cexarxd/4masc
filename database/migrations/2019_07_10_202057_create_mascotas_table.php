@@ -17,15 +17,16 @@ class CreateMascotasTable extends Migration
             $table->bigIncrements('id');
             $table->integer('mascotas_id')->unique();
             $table->string('nombre');
+            $table->string('foto');
         /*relacion con tabla colores*/
             $table->unsignedBigInteger('color_id');
 $table->foreign('color_id', 'fk_mascotas_colores')->references('id')->on('colores')->onDelete('cascade')->onUpdate('cascade');
         /*relacion con tabla especies*/ 
             $table->unsignedBigInteger('especie_id');
 $table->foreign('especie_id', 'fk_mascotas_especies')->references('id')->on('especies')->onDelete('cascade')->onUpdate('cascade');
-        /*relacion con tabla razas*/
-            $table->unsignedBigInteger('raza_id');
-$table->foreign('raza_id', 'fk_mascotas_razas')->references('id')->on('razas')->onDelete('cascade')->onUpdate('cascade');
+        /*relacion con tabla razas_perros*/
+            $table->unsignedBigInteger('raza_id_perros');
+$table->foreign('raza_id_perros', 'fk_mascotas_razas_perros')->references('id')->on('razas_perros')->onDelete('cascade')->onUpdate('cascade');
         /*relacion con tabla sexos*/
             $table->unsignedBigInteger('sexo_id');
 $table->foreign('sexo_id', 'fk_mascotas_sexos')->references('id')->on('sexos')->onDelete('cascade')->onUpdate('cascade');
@@ -48,6 +49,10 @@ $table->foreign('estado_id', 'fk_mascotas_estados')->references('id')->on('estad
         $table->unsignedBigInteger('users_cc');
         $table->foreign('users_cc', 'fk_mascotas_users')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
+        /*relacion con tabla razas_perros*/
+$table->unsignedBigInteger('raza_id_gatos');
+$table->foreign('raza_id_gatos', 'fk_mascotas_razas_gatos')->references('id')->on('razas_gatos')->onDelete('cascade')->onUpdate('cascade');
+                     
         });
     }
 

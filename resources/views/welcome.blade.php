@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <img src="{{asset('storage/uploads/login.png')}}" alt="" width="200">
+                    <img src="{{asset('storage/app/public/uploads/login.png')}}" alt="" width="200">
                 </div>
             </div>
         </div>

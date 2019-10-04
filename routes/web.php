@@ -2,9 +2,8 @@
 
 
 /* return view('nombrecarpeta.nombreblade'); va en el cotroller index*/
-/*Route::resource('regis-masc', 'MascotasController');
 
-*/
+
 /* incio de 4masc.com*/
 Route::get('/', function () {
     return view('welcome');
@@ -33,10 +32,6 @@ if ($options['reset'] ?? true) {
 Route::get('/home', 'HomeController@index')->name('home');
 /* incio de Menu usuarios*/
 
-/* Modulo registro de mascotas*/
-Route::resource('passwords/register', 'UserController'); //mirar pendiente
-/* Modulo registro de mascotas*/
-
 /*RUTAS DEL MENU*/
 Route::get('menu', 'Admin\MenuController@index')->name('menu');
 Route::get('menu/crear', 'Admin\MenuController@crear')->name('crear_menu');
@@ -63,3 +58,8 @@ Route::delete('rol/{id}', 'Admin\RolController@eliminar')->name('eliminar_rol');
 //Route::get('permiso/{id}/editar', 'PermisoController@editar')->name('editar_permiso');
 //Route::put('permiso/{id}', 'PermisoController@actualizar')->name('actualizar_permiso');
 //Route::delete('permiso/{id}', 'PermisoController@eliminar')->name('eliminar_permiso');
+/*RUTAS DE resgistro de mascotas*/
+Route::get('registrar', 'Registro\RegistroController@index')->name('crear_registro');
+Route::Post('registrar', 'Registro\RegistroController@store')->name('registro');
+/*RUTAS DE MASCOTAS EN ADOPCION*/
+Route::get('perdidas', '\RegistroController@index')->name('crear_registro');

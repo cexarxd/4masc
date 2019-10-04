@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRazasTable extends Migration
+class CreateRazasGatosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateRazasTable extends Migration
      */
     public function up()
     {
-        Schema::create('razas_perros', function (Blueprint $table) {
+        Schema::create('razas_gatos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('razas_id_perros')->unique();
+            $table->unsignedInteger('razas_id_gatos')->unique();
             $table->string('nombre');
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreateRazasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('razas_perros');
+        Schema::dropIfExists('razas_gatos');
     }
 }

@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Mascota extends Model
 {
+    protected $fillable = [
+        'mascotas_id', 'nombre','password','color_id','especie_id','raza_id_perros','sexo_id','antirrabica_id','temperamento_id','antirrabica_id','esteril_id','adopcion_id','users_cc','raza_id_gatos','foto',
+    ];
+
     protected $table = 'mascotas';
     //relacion uno a muchos
     public function colores(){
@@ -16,8 +20,12 @@ class Mascota extends Model
         return $this->hasMany('App\Especie');
     }
     //relacion uno a muchos
-    public function razas(){
-        return $this->hasMany('App\Raza');
+    public function razas_perros(){
+        return $this->hasMany('App\Razadog');
+    }
+    //relacion uno a muchos
+    public function razas_gatos(){
+        return $this->hasMany('App\Razacat');
     }
     //relacion muchos a uno
     public function sexos(){
@@ -45,8 +53,5 @@ class Mascota extends Model
         return $this->belongsTo('App\User', 'users_cc');
     }
     //relacion muchos a uno
-    public function adopciones()
-    {
-        return $this->belongsTo('App\Adopcion', 'adopcion_id');
-    }
+   
 }

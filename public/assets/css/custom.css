@@ -25,3 +25,30 @@ label.requerido:after{
 .pl-40{
     padding-left:40px !important;
 }
+
+/*boton para abrir el mensaje oculto */
+.open-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    bottom: 14px;
+    width: 44px;
+    font-size: 11px;
+    padding: 3px;
+    margin-top: 2px;
+  }
+  /* el mensaje oculto */
+  .form-popup {
+    display: none;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  /* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+
+  }

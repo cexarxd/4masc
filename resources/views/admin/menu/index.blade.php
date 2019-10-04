@@ -29,7 +29,7 @@ Menú
             </div>
             <div class="box-body">
                 @csrf
-                <div class="dd" id="nestable3">
+                <div class="dd" id="nestable">
                     <ol class="dd-list">
                         @foreach ($menus as $key => $item)
                             @if ($item["menu_id"] != 0)

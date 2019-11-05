@@ -37,7 +37,7 @@ var Biblioteca = function () {
                 }
             });
         },
-        notificaciones: function (mensaje, titulo, tipo) {//para las ventanas del ns
+        notificaciones: function (mensaje, titulo, tipo) {
             toastr.options = {
                 closeButton: true,
                 newestOnTop: true,

@@ -61,6 +61,12 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .img4masc { 
+                margin-top: 0%;
+                width: 80%;
+                position: absolute;
+                display: flex;
+            }
         </style>
     </head>
     <body>
@@ -78,12 +84,12 @@
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    <img src="{{asset('storage/app/public/uploads/login.png')}}" alt="" width="200">
-                </div>
+            
+                <div class="img4masc">
+                    <img  src="{{asset('assets/image/login.png')}}" alt="" width="50%" >
+              
             </div>
-        </div>
+            </div>
+            
     </body>
 </html>

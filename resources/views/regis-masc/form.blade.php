@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="{{asset("assets/css/custom.css")}}"> 
 <script>
         $(function(){
-            $(".op").click(function(){
+            $("#especie_id").click(function(){
+                console.log($(this).val());
                 if($(this).val()=='1'){
                     $("#raza_id_perros").removeAttr('disabled');  
                     $("#raza_id_perros").removeAttr('hidden'); 
@@ -28,7 +29,6 @@
                     $("#razas_gato").removeAttr('hidden');   
                     $("#raza_id_gatos").focus();
                     $("#razas_gato").focus(); 
-                        
                 }else{
                     $("#raza_id_gatos").attr('disabled','disabled');  
                     $("#raza_id_gatos").attr('hidden','hidden'); 
@@ -37,13 +37,7 @@
                 }
             })
         })
-        function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
+   
 </script>
 
 <div class="form-group row">
@@ -220,19 +214,7 @@ function closeForm() {
                 <strong>{{ $message }}</strong>
             </span>
     @enderror   
-    <div class="open-button input-group-prepend" onclick="openForm()">Ayuda</div>
-    <div class="form-popup" id="myForm">
-      <form  class="form-container">
-        <p>1- vivo: para estado normal.<br>
-        2- muerto: si falleció.<br>
-        3- disponible para adoptar: auturiza publicacion de su mascota, para ser adoptada.<br>
-        4- perdido: entra en estado de busqueda.
-        <button type="button" class="open-button" onclick="closeForm()">Cerrar</button></p>
-        
-      </form>
-      
     </div> 
-</div>
 </div>
 
 

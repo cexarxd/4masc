@@ -11,7 +11,6 @@ $('.menu_rol').on('change', function () {
     }
     ajaxRequest('/admin/menu-rol', data);
 });
-
 function ajaxRequest (url, data) {
     $.ajax({
         url: url,
